@@ -1,7 +1,7 @@
 spring:
   datasource:
     url: jdbc:postgresql://catalog:5432/catalogdb
-    username: postgres
+    username: catalog
     password: password
 
   jpa:
