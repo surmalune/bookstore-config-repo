@@ -20,13 +20,13 @@ server:
 
 # ---
 spring:
-    cloud:
-        gateway:
-          routes:
-            - id: catalog
-              uri: http://catalog:8081/
-              predicates:
-                - Path=/catalog/**
+    # cloud:
+    #     gateway:
+    #       routes:
+    #         - id: catalog
+    #           uri: http://catalog:8081/
+    #           predicates:
+    #             - Path=/catalog/**
     
     security:
         oauth2:
