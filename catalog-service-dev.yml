@@ -11,8 +11,6 @@ spring:
     hibernate:
       naming:
         implicit-strategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyJpaCompliantImpl
-
-    hibernate:
       ddl-auto: create-drop
     
     properties:
