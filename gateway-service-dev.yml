@@ -3,10 +3,28 @@ spring:
         config:
             enabled: true
         
+    #     gateway:
+    #       routes:
+    #         - id: catalog
+    #           uri: http://localhost:8081/
+    #           predicates:
+    #             - Path=/catalog/**
+    
+    # security:
+    #     oauth2:
+    #       resourceserver:
+    #         jwt:
+    #           issuer-uri: http://localhost:8080/realms/auth
+server:
+  port: 8000
+
+# ---
+spring:
+    cloud:
         gateway:
           routes:
             - id: catalog
-              uri: http://localhost:8081/
+              uri: http://catalog:8081/
               predicates:
                 - Path=/catalog/**
     
@@ -14,22 +32,4 @@ spring:
         oauth2:
           resourceserver:
             jwt:
-              issuer-uri: http://localhost:8080/realms/auth
-server:
-  port: 8000
-
-# ---
-# spring:
-#     cloud:
-#         gateway:
-#           routes:
-#             - id: catalog
-#               uri: http://catalog:8081/
-#               predicates:
-#                 - Path=/catalog/**
-    
-#     security:
-#         oauth2:
-#           resourceserver:
-#             jwt:
-#               issuer-uri: http://keycloak:8080/realms/auth
+              issuer-uri: http://keycloak:8080/realms/auth
