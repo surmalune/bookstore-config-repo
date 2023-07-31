@@ -3,18 +3,18 @@ spring:
         config:
             enabled: true
         
-        gateway:
-          routes:
-            - id: catalog
-              uri: http://localhost:8081/
-              predicates:
-                - Path=/catalog/**
+    #     gateway:
+    #       routes:
+    #         - id: catalog
+    #           uri: http://localhost:8081/
+    #           predicates:
+    #             - Path=/catalog/**
     
-    security:
-        oauth2:
-          resourceserver:
-            jwt:
-              issuer-uri: http://localhost:8080/realms/auth
+    # security:
+    #     oauth2:
+    #       resourceserver:
+    #         jwt:
+    #           issuer-uri: http://localhost:8080/realms/auth
 server:
   port: 8000
 
