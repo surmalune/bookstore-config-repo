@@ -12,10 +12,13 @@ spring:
       naming:
         implicit-strategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyJpaCompliantImpl
 
+    hibernate:
+      ddl-auto: create-drop
+    
     properties:
       hibernate:
         format_sql: true
-        ddl-auto: create
+        # ddl-auto: create
 
 server:
   port: 8081
