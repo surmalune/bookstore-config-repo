@@ -14,7 +14,7 @@ spring:
         oauth2:
           resourceserver:
             jwt:
-              issuer-uri: http://keycloak:8080/realms/auth
+              issuer-uri: http://0.0.0.0:8080/realms/auth
               # jwk-set-uri: http://127.0.0.1:8080/realms/auth/protocol/openid-connect/certs
 server:
   port: 8000
