@@ -9,6 +9,9 @@ spring:
               uri: http://catalog:8081/
               predicates:
                 - Path=/catalog/**
+              filters:
+                - TokenRelay=
+                - RemoveRequestHeader=Cookie
     
     security:
         oauth2:
