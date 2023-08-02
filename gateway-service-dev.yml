@@ -4,11 +4,14 @@ spring:
             enabled: true
         
         gateway:
-          routes:
-            - id: catalog
-              uri: http://catalog:8081/
-              predicates:
-                - Path=/catalog/**
+            discovery:
+                locator:
+                    enabled: true
+          # routes:
+          #   - id: catalog
+          #     uri: http://catalog:8081/
+          #     predicates:
+          #       - Path=/catalog/**
     
     security:
         oauth2:
