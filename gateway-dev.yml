@@ -9,11 +9,11 @@ spring:
                     enabled: true
                     lower-case-service-id: true
     
-    security:
-        oauth2:
-          resourceserver:
-            jwt:
-              issuer-uri: http://keycloak:8080/realms/auth
+    # security:
+    #     oauth2:
+    #       resourceserver:
+    #         jwt:
+    #           issuer-uri: http://keycloak:8080/realms/auth
 
 server:
   port: 8000
