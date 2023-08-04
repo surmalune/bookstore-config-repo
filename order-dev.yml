@@ -1,7 +1,7 @@
 spring:
   r2dbc:
     url: r2dbc:postgresql://postgres:5432/orderdb
-    username: order
+    username: orders
     password: password
 
   security:
