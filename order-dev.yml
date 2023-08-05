@@ -11,4 +11,4 @@ spring:
           issuer-uri: http://keycloak:8080/realms/auth
 
 server:
-  port: 8082
+  port: 8083
