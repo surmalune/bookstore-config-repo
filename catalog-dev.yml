@@ -4,11 +4,11 @@ spring:
     username: catalog
     password: password
 
-  # security:
-  #     oauth2:
-  #       resourceserver:
-  #         jwt:
-  #           issuer-uri: http://keycloak:8080/realms/auth
+  security:
+      oauth2:
+        resourceserver:
+          jwt:
+            issuer-uri: http://keycloak:8080/realms/auth
 
   jpa:
     generate-ddl: true
