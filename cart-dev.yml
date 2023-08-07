@@ -9,23 +9,23 @@ spring:
         resourceserver:
           jwt:
             issuer-uri: http://keycloak:8080/realms/auth
-        client:
-          registration:
-            keycloak:
-              authorization-grant-type: client_credentials
-              client-id: cart-client
-              client-secret: etlxnIPSbCpjiPJfz6lyVTXphNF2xamy
-              scope: openid
-              provider: keycloak
-          provider:
-            keycloak:
-              token-uri: http://keycloak:8080/realms/auth/protocol/openid-connect/token
+  #       client:
+  #         registration:
+  #           keycloak:
+  #             authorization-grant-type: client_credentials
+  #             client-id: cart-client
+  #             client-secret: etlxnIPSbCpjiPJfz6lyVTXphNF2xamy
+  #             scope: openid
+  #             provider: keycloak
+  #         provider:
+  #           keycloak:
+  #             token-uri: http://keycloak:8080/realms/auth/protocol/openid-connect/token
 
-  cloud:
-    openfeign:
-      oauth2:
-        enabled: true
-        clientRegistrationId: keycloak
+  # cloud:
+  #   openfeign:
+  #     oauth2:
+  #       enabled: true
+  #       clientRegistrationId: keycloak
             
   jpa:
     generate-ddl: true
