@@ -24,6 +24,19 @@ spring:
       hibernate:
         format_sql: true
         globally_quoted_identifiers: true
+        
+  kafka:
+    bootstrap-servers: kafka:9092
+    consumer:
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+      group-id: cart-service
+      auto-offset-reset: earliest
+      properties:
+        spring:
+          json:
+            type.mapping: Event:com.bookstore.cartservice.dto.Event
+            trusted.packages: "*"
 
 server:
   port: 8082
